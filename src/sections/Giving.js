@@ -27,8 +27,18 @@ class Giving extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-giving">
-            <p>[ this is the Giving component ]</p>
-            <p>some stuff in here</p>
+            <p style={{ marginBottom: 30 }}>
+              We are excited to announce an all-new online giving system for
+              STF.
+            </p>
+            <a
+              href="http://give.stfchurch.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-giving"
+            >
+              Give Here
+            </a>
           </div>
         </Collapse>
       </div>

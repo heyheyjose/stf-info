@@ -89,6 +89,11 @@
   padding: 15px;
   border-bottom: 1px dashed black;
 }
+
+.btn-giving {
+  color: #68337e;
+  border-color: #68337e;
+}
 /* endregion */
 
 /* region Contact */
