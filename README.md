@@ -1,0 +1,1 @@
+stf-info test area

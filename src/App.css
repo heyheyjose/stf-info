@@ -1,0 +1,21 @@
+.stf-info-app {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+.fa {
+  opacity: 0.5;
+}
+
+.fa-close {
+  float: right;
+  right: 15px;
+  position: relative;
+  top: 6px;
+}
