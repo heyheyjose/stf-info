@@ -27,8 +27,18 @@ class Happening extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-happening">
-            <p>[ this is the What's Happening component ]</p>
-            <p>some stuff in here</p>
+            <p style={{ marginBottom: 30 }}>
+              Find information about all of our upcoming events and how to
+              register for them.
+            </p>
+            <a
+              href="http://stfchurch.com/info"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-happening"
+            >
+              Upcoming Events
+            </a>
           </div>
         </Collapse>
       </div>

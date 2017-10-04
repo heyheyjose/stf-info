@@ -27,8 +27,17 @@ class Message extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-message">
-            <p>[ this is the Latest Message component ]</p>
-            <p>some stuff in here</p>
+            <p style={{ marginBottom: 30 }}>
+              Watch the latest message or look through previous messages.
+            </p>
+            <a
+              href="http://subsplash.com/stfchurch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-message"
+            >
+              Start Watching
+            </a>
           </div>
         </Collapse>
       </div>

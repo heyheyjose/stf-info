@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './section.css';
 import './responsive.css';
+import stfInfoLogo from './logo_short.png';
 
 // import sections
 import Connect from './sections/Connect';
@@ -18,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="stf-info-app">
-        {'<- stf logo here ->'}
+        <img src={stfInfoLogo} className="stf-info-logo" alt="logo" />
         <Connect />
         <PrayerRequest />
         <Happening />

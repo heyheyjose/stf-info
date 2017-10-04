@@ -27,8 +27,17 @@ class Groups extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-groups">
-            <p>[ this is the Groups component ]</p>
-            <p>some stuff in here</p>
+            <p style={{ marginBottom: 30 }}>
+              Browse our small groups and get information on how to sign up.
+            </p>
+            <a
+              href="http://stfchurch.com/communities"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-groups"
+            >
+              Browse Groups
+            </a>
           </div>
         </Collapse>
       </div>

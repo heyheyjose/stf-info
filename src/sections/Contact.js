@@ -27,11 +27,15 @@ class Contact extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-contact">
-            <p>[ this is the Contact component ]</p>
-            <p>
-              could do a contact form here, or link out to the current contact
-              form
-            </p>
+            <p style={{ marginBottom: 30 }}>Connect with us!</p>
+            <a
+              href="http://stfchurch.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-contact"
+            >
+              Contact Us
+            </a>
           </div>
         </Collapse>
       </div>

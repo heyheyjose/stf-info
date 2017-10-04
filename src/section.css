@@ -27,7 +27,6 @@
 
 .content-section-connect {
   padding: 15px;
-  border-bottom: 1px dashed black;
 }
 /* endregion */
 
@@ -39,7 +38,6 @@
 
 .content-section-prayer {
   padding: 15px;
-  border-bottom: 1px dashed black;
 }
 /* endregion */
 
@@ -51,7 +49,11 @@
 
 .content-section-happening {
   padding: 15px;
-  border-bottom: 1px dashed black;
+}
+
+.btn-happening {
+  color: #da5d00;
+  border-color: #da5d00;
 }
 /* endregion */
 
@@ -63,7 +65,11 @@
 
 .content-section-message {
   padding: 15px;
-  border-bottom: 1px dashed black;
+}
+
+.btn-message {
+  color: #198d44;
+  border-color: #198d44;
 }
 /* endregion */
 
@@ -75,7 +81,11 @@
 
 .content-section-groups {
   padding: 15px;
-  border-bottom: 1px dashed black;
+}
+
+.btn-groups {
+  color: #ad1024;
+  border-color: #ad1024;
 }
 /* endregion */
 
@@ -87,7 +97,6 @@
 
 .content-section-giving {
   padding: 15px;
-  border-bottom: 1px dashed black;
 }
 
 .btn-giving {
@@ -104,6 +113,10 @@
 
 .content-section-contact {
   padding: 15px;
-  border-bottom: 1px dashed black;
+}
+
+.btn-contact {
+  color: #ecce01;
+  border-color: #ecce01;
 }
 /* endregion */
