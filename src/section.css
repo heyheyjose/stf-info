@@ -26,7 +26,48 @@
 }
 
 .content-section-connect {
-  padding: 15px;
+  padding: 5px;
+  text-align: left;
+}
+
+.content-section-connect-title {
+  margin: 5px 0 25px 0;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.connect-form-label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7b7b7b;
+  margin: 0;
+}
+
+.connect-form-label-contact {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7b7b7b;
+  margin: 0 0 10px 0;
+}
+
+#connect-input-first-name,
+#connect-input-last-name,
+#connect-input-email,
+#connect-input-phone {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#connect-input-request {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 100px;
 }
 /* endregion */
 
