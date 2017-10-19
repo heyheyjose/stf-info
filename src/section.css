@@ -17,6 +17,7 @@
 .section-main a span {
   font-size: 28px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 /* region Connect */
@@ -26,11 +27,17 @@
 }
 
 .content-section-connect {
-  padding: 5px;
-  text-align: left;
+  /*padding: 5px;*/
+  padding: 15px;
+  /*text-align: left;*/
 }
 
-.content-section-connect-title {
+.btn-connect-card {
+  color: #0093aa;
+  border-color: #0093aa;
+}
+
+/*.content-section-connect-title {
   margin: 5px 0 25px 0;
   font-weight: 700;
   color: #4a4a4a;
@@ -68,7 +75,7 @@
   border: 1px solid #cccccc;
   border-radius: 4px;
   height: 100px;
-}
+}*/
 /* endregion */
 
 /* region Prayer Request */
@@ -79,6 +86,11 @@
 
 .content-section-prayer {
   padding: 15px;
+}
+
+.btn-prayer-request {
+  color: #015383;
+  border-color: #015383;
 }
 /* endregion */
 
@@ -157,7 +169,7 @@
 }
 
 .btn-contact {
-  color: #ecce01;
-  border-color: #ecce01;
+  color: #000000;
+  border-color: #000000;
 }
 /* endregion */
