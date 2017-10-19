@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { Collapse, Button, ButtonGroup } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 
-import Input from '../core/connect-form/Input';
+// import Input from '../core/connect-form/Input';
 
 class Connect extends Component {
   constructor(props) {
@@ -29,6 +29,18 @@ class Connect extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-connect">
+            <p style={{ marginBottom: 30 }}>
+              Fill out a connection card so we can better understand how we can serve you!
+            </p>
+            <a
+              href="https://stfc.fellowshiponego.com/external/form/bc536a3a-12e9-467b-b798-de246250254c"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary btn-lg btn-connect-card"
+            >
+              Connection Card
+            </a>
+            {/*}
             <h5 className="content-section-connect-title">
               Fill out the connection card below:
             </h5>
@@ -72,6 +84,7 @@ class Connect extends Component {
                 Submit
               </Button>
             </div>
+            {*/}
           </div>
         </Collapse>
       </div>
