@@ -27,7 +27,8 @@ class Contact extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-contact">
-            <p style={{ marginBottom: 30 }}>Connect with us!</p>
+            <h4 style={{ marginBottom: 10 }}>Get in touch with us!</h4>
+            <p style={{ marginBottom: 30 }}>Phone: 813-251-1515</p>
             <a
               href="http://stfchurch.com/contact"
               target="_blank"
