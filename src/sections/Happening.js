@@ -17,7 +17,7 @@ class Happening extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-style">
         <div className="section-main whats-happening">
           <a onClick={this.toggle}>
             <span className="fa fa-calendar" />

@@ -20,13 +20,15 @@ class App extends Component {
     return (
       <div className="stf-info-app">
         <img src={stfInfoLogo} className="stf-info-logo" alt="logo" />
-        <Connect />
-        <PrayerRequest />
-        <Happening />
-        <Message />
-        <Groups />
-        <Giving />
-        <Contact />
+        <div>
+          <Connect />
+          <PrayerRequest />
+          <Happening />
+          <Message />
+          <Groups />
+          <Giving />
+          <Contact />
+        </div>
       </div>
     );
   }

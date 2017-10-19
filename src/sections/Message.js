@@ -17,7 +17,7 @@ class Message extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-style">
         <div className="section-main message">
           <a onClick={this.toggle}>
             <span className="fa fa-list-ul" />

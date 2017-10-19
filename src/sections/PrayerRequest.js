@@ -17,7 +17,7 @@ class PrayerRequest extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-style">
         <div className="section-main prayer-request">
           <a onClick={this.toggle}>
             <span className="fa fa-comment-o" />

@@ -9,3 +9,17 @@
     font-size: 24px;
   }
 }
+
+/* to display "cards" at desktop size */
+@media only screen and (min-width: 960px) {
+  .card-style {
+    display: inline-block;
+    width: 35%;
+    margin: 10px;
+  }
+
+  .section-main {
+    border-radius: 8px;
+    padding: 20px;
+  }
+}
