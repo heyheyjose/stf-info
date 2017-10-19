@@ -22,8 +22,8 @@
 
 /* region Connect */
 .connect {
-  background-color: #0093aa;
-  border-color: #08788a;
+  background-color: #079078;
+  border-color: #079078;
 }
 
 .content-section-connect {
@@ -33,8 +33,8 @@
 }
 
 .btn-connect-card {
-  color: #0093aa;
-  border-color: #0093aa;
+  color: #079078;
+  border-color: #079078;
 }
 
 /*.content-section-connect-title {
@@ -80,8 +80,8 @@
 
 /* region Prayer Request */
 .prayer-request {
-  background-color: #015383;
-  border-color: #053d5f;
+  background-color: #cfcb0a;
+  border-color: #cfcb0a;
 }
 
 .content-section-prayer {
@@ -89,15 +89,15 @@
 }
 
 .btn-prayer-request {
-  color: #015383;
-  border-color: #015383;
+  color: #cfcb0a;
+  border-color: #cfcb0a;
 }
 /* endregion */
 
 /* region Happening */
 .whats-happening {
-  background-color: #da5d00;
-  border-color: #9e4604;
+  background-color: #0093aa;
+  border-color: #0093aa;
 }
 
 .content-section-happening {
@@ -105,15 +105,15 @@
 }
 
 .btn-happening {
-  color: #da5d00;
-  border-color: #da5d00;
+  color: #0093aa;
+  border-color: #0093aa;
 }
 /* endregion */
 
 /* region Message */
 .message {
-  background-color: #198d44;
-  border-color: #0f6f33;
+  background-color: #005383;
+  border-color: #005383;
 }
 
 .content-section-message {
@@ -121,15 +121,15 @@
 }
 
 .btn-message {
-  color: #198d44;
-  border-color: #198d44;
+  color: #005383;
+  border-color: #005383;
 }
 /* endregion */
 
 /* region Groups */
 .groups {
-  background-color: #ad1024;
-  border-color: #8c0516;
+  background-color: #900e13;
+  border-color: #900e13;
 }
 
 .content-section-groups {
@@ -137,15 +137,15 @@
 }
 
 .btn-groups {
-  color: #ad1024;
-  border-color: #ad1024;
+  color: #900e13;
+  border-color: #900e13;
 }
 /* endregion */
 
 /* region Giving */
 .giving {
-  background-color: #68337e;
-  border-color: #4f1e63;
+  background-color: #052536;
+  border-color: #052536;
 }
 
 .content-section-giving {
@@ -153,15 +153,15 @@
 }
 
 .btn-giving {
-  color: #68337e;
-  border-color: #68337e;
+  color: #052536;
+  border-color: #052536;
 }
 /* endregion */
 
 /* region Contact */
 .contact {
-  background-color: #ecce01;
-  border-color: #ad9004;
+  background-color: #079078;
+  border-color: #079078;
 }
 
 .content-section-contact {

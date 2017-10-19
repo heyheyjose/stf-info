@@ -30,7 +30,9 @@ class PrayerRequest extends Component {
             <p style={{ marginBottom: 10 }}>
               Fill out the form to send us a prayer request.
             </p>
-            <p style={{ marginBottom: 30 }}>Staff prays over each request every Monday.</p>
+            <p style={{ marginBottom: 30 }}>
+              Staff prays over each request every Monday.
+            </p>
             <a
               href="https://stfc.fellowshiponego.com/external/form/327a0a96-36f2-4214-92fc-34a191bbbeb6"
               target="_blank"
