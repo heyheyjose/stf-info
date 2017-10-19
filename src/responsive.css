@@ -12,6 +12,11 @@
 
 /* to display "cards" at desktop size */
 @media only screen and (min-width: 960px) {
+  .stf-info-logo {
+    width: 25%;
+    margin: 15px;
+  }
+
   .card-style {
     display: inline-block;
     width: 35%;

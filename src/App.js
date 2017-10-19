@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './section.css';
 import './responsive.css';
-import stfInfoLogo from './logo_short.png';
+import stfInfoLogo from './stf_logo_short_2tone.png';
 
 // import sections
 import Connect from './sections/Connect';
