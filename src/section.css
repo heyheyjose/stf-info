@@ -22,8 +22,8 @@
 
 /* region Connect */
 .connect {
-  background-color: #079078;
-  border-color: #079078;
+  background-color: #0093aa;
+  border-color: #007a91;
 }
 
 .content-section-connect {
@@ -33,8 +33,8 @@
 }
 
 .btn-connect-card {
-  color: #079078;
-  border-color: #079078;
+  color: #0093aa;
+  border-color: #0093aa;
 }
 
 /*.content-section-connect-title {
@@ -80,8 +80,8 @@
 
 /* region Prayer Request */
 .prayer-request {
-  background-color: #cfcb0a;
-  border-color: #cfcb0a;
+  background-color: #079078;
+  border-color: #00775f;
 }
 
 .content-section-prayer {
@@ -89,15 +89,15 @@
 }
 
 .btn-prayer-request {
-  color: #cfcb0a;
-  border-color: #cfcb0a;
+  color: #079078;
+  border-color: #079078;
 }
 /* endregion */
 
 /* region Happening */
 .whats-happening {
-  background-color: #0093aa;
-  border-color: #0093aa;
+  background-color: #cfbf0a;
+  border-color: #9c8c00;
 }
 
 .content-section-happening {
@@ -105,15 +105,15 @@
 }
 
 .btn-happening {
-  color: #0093aa;
-  border-color: #0093aa;
+  color: #cfbf0a;
+  border-color: #cfbf0a;
 }
 /* endregion */
 
 /* region Message */
 .message {
   background-color: #005383;
-  border-color: #005383;
+  border-color: #003a6a;
 }
 
 .content-section-message {
@@ -129,7 +129,7 @@
 /* region Groups */
 .groups {
   background-color: #900e13;
-  border-color: #900e13;
+  border-color: #5d0000;
 }
 
 .content-section-groups {
@@ -145,7 +145,7 @@
 /* region Giving */
 .giving {
   background-color: #052536;
-  border-color: #052536;
+  border-color: #000c1d;
 }
 
 .content-section-giving {
@@ -160,8 +160,8 @@
 
 /* region Contact */
 .contact {
-  background-color: #079078;
-  border-color: #079078;
+  background-color: #0093aa;
+  border-color: #007a91;
 }
 
 .content-section-contact {
@@ -169,7 +169,7 @@
 }
 
 .btn-contact {
-  color: #000000;
-  border-color: #000000;
+  color: #0093aa;
+  border-color: #0093aa;
 }
 /* endregion */
