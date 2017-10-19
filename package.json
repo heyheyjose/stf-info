@@ -1,7 +1,6 @@
 {
   "name": "stf-info",
   "version": "0.1.0",
-  "homepage": "https://heyheyjose.github.io/stf-info",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
