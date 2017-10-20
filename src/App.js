@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      happeningPosts: [],
+      postsWithImage: [],
     };
   }
 
@@ -32,11 +32,43 @@ class App extends Component {
         return response.json();
       })
       .then(posts => {
-        const filteredHappening = posts.filter(post =>
-          post.categories.includes(106)
-        );
-        this.setState({ happeningPosts: filteredHappening });
-        console.log(filteredHappening);
+        const filteredHappening = posts.filter(post => {
+          return post.categories.includes(106);
+        });
+        return filteredHappening;
+      })
+      .then(postList => {
+        const postsWithImage = [];
+        postList.forEach(post => {
+          const featuredMediaId = post.featured_media;
+          const mediaUri = `http://stfchurch.com/wp-json/wp/v2/media/${featuredMediaId}`;
+
+          const id = post.id,
+            date = post.date,
+            title = post.title.rendered,
+            content = post.post_content_plain_text,
+            registerLink = post.f1_register_direct_link;
+
+          if (featuredMediaId) {
+            fetch(mediaUri)
+              .then(response => {
+                return response.json();
+              })
+              .then(mediaObject => {
+                const withImage = {
+                  id,
+                  date,
+                  title,
+                  content,
+                  image: mediaObject.source_url,
+                  registerLink,
+                };
+                postsWithImage.push(withImage);
+              });
+          }
+        });
+        this.setState({ postsWithImage });
+        console.log(postsWithImage);
       })
       .catch(error => {
         console.log(error);
@@ -47,11 +79,11 @@ class App extends Component {
   render() {
     return (
       <div className="stf-info-app">
-        <img src={stfInfoLogo} className="stf-info-logo" alt="logo" />
+        <img src={stfInfoLogo} alt="logo" className="stf-info-logo" />
         <div>
           <Connect />
           <PrayerRequest />
-          <Happening posts={this.state.happeningPosts} />
+          <Happening posts={this.state.postsWithImage} />
           <Message />
           <Groups />
           <Giving />
