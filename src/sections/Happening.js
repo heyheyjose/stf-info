@@ -48,14 +48,16 @@ class Happening extends Component {
                     <p className="content-section-happening-post-content">
                       {post.content}
                     </p>
-                    <a
-                      href={post.registerLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline-primary btn-lg btn-happening"
-                    >
-                      Register
-                    </a>
+                    {post.registerLink && (
+                      <a
+                        href={post.registerLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-primary btn-lg btn-happening"
+                      >
+                        Register
+                      </a>
+                    )}
                   </div>
                 );
               })}
