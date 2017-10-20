@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
@@ -16,6 +17,8 @@ class Happening extends Component {
   }
 
   render() {
+    const { posts } = this.props;
+
     return (
       <div className="card-style">
         <div className="section-main whats-happening">
@@ -27,6 +30,7 @@ class Happening extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-happening">
+            {/*}
             <p style={{ marginBottom: 30 }}>
               Find information about all of our upcoming events and how to
               register for them.
@@ -39,6 +43,19 @@ class Happening extends Component {
             >
               Upcoming Events
             </a>
+            {*/}
+
+            {posts &&
+              posts.map(post => {
+                return (
+                  <div key={post.id} style={{ borderBottom: '3px solid' }}>
+                    <h4>{post.title.rendered}</h4>
+                    {/* <p>{JSON.stringify(post.content.rendered)}</p> */}
+                    <p>{post.post_content_plain_text}</p>
+                    <p>media number: {post.featured_media}</p>
+                  </div>
+                );
+              })}
           </div>
         </Collapse>
       </div>
@@ -47,3 +64,11 @@ class Happening extends Component {
 }
 
 export default Happening;
+
+Happening.defaultProps = {
+  posts: [],
+};
+
+Happening.propTypes = {
+  posts: PropTypes.array,
+};
