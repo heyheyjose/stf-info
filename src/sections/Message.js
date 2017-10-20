@@ -20,7 +20,7 @@ class Message extends Component {
       <div className="card-style">
         <div className="section-main message">
           <a onClick={this.toggle}>
-            <span className="fa fa-list-ul" />
+            <span className="fa fa-book" />
             <span>Latest Message</span>
             <span className={classNames({ 'fa fa-close': this.state.show })} />
           </a>
