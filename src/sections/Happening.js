@@ -30,29 +30,32 @@ class Happening extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-happening">
-            {/*}
-            <p style={{ marginBottom: 30 }}>
-              Find information about all of our upcoming events and how to
-              register for them.
-            </p>
-            <a
-              href="http://stfchurch.com/info"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-primary btn-lg btn-happening"
-            >
-              Upcoming Events
-            </a>
-            {*/}
-
             {posts &&
               posts.map(post => {
                 return (
-                  <div key={post.id} style={{ borderBottom: '3px solid' }}>
-                    <h4>{post.title.rendered}</h4>
-                    {/* <p>{JSON.stringify(post.content.rendered)}</p> */}
-                    <p>{post.post_content_plain_text}</p>
-                    <p>media number: {post.featured_media}</p>
+                  <div
+                    key={post.id}
+                    className="content-section-happening-post-wrapper"
+                  >
+                    <img
+                      src={post.image}
+                      alt={`${post.title}`}
+                      className="content-section-happening-post-image"
+                    />
+                    <h4 className="content-section-happening-post-title">
+                      {post.title}
+                    </h4>
+                    <p className="content-section-happening-post-content">
+                      {post.content}
+                    </p>
+                    <a
+                      href={post.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-primary btn-lg btn-happening"
+                    >
+                      Register
+                    </a>
                   </div>
                 );
               })}
