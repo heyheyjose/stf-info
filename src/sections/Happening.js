@@ -30,18 +30,20 @@ class Happening extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-happening">
-            {posts &&
+            {posts ? (
               posts.map(post => {
                 return (
                   <div
                     key={post.id}
                     className="content-section-happening-post-wrapper"
                   >
-                    <img
-                      src={post.image}
-                      alt={`${post.title}`}
-                      className="content-section-happening-post-image"
-                    />
+                    {post.image && (
+                      <img
+                        src={post.image}
+                        alt={`${post.title}`}
+                        className="content-section-happening-post-image"
+                      />
+                    )}
                     <h4 className="content-section-happening-post-title">
                       {post.title}
                     </h4>
@@ -60,7 +62,12 @@ class Happening extends Component {
                     )}
                   </div>
                 );
-              })}
+              })
+            ) : (
+              <div style={{ margin: 20 }}>
+                Something went wrong, please reload the page.
+              </div>
+            )}
           </div>
         </Collapse>
       </div>

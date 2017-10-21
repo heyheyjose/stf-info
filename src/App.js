@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      postsWithImage: [],
+      modifiedPosts: [],
     };
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
         return filteredHappening;
       })
       .then(postList => {
-        const postsWithImage = [];
+        const modifiedPosts = [];
         postList.forEach(post => {
           const featuredMediaId = post.featured_media;
           const mediaUri = `http://stfchurch.com/wp-json/wp/v2/media/${featuredMediaId}`;
@@ -49,7 +49,8 @@ class App extends Component {
             content = post.post_content_plain_text,
             registerLink = post.f1_register_direct_link;
 
-          if (featuredMediaId) {
+          if (post.categories.includes(106) && featuredMediaId !== 0) {
+            // get media data for post if post includes 'featured_media'
             fetch(mediaUri)
               .then(response => {
                 return response.json();
@@ -60,15 +61,25 @@ class App extends Component {
                   date,
                   title,
                   content,
-                  image: mediaObject.source_url,
                   registerLink,
+                  image: mediaObject.source_url,
                 };
-                postsWithImage.push(withImage);
+                modifiedPosts.push(withImage);
               });
+          } else {
+            // do not get media data for post if 'featured_media' is missing
+            const withoutImage = {
+              id,
+              date,
+              title,
+              content,
+              registerLink,
+              image: false,
+            };
+            modifiedPosts.push(withoutImage);
           }
         });
-        this.setState({ postsWithImage });
-        console.log(postsWithImage);
+        this.setState({ modifiedPosts });
       })
       .catch(error => {
         console.log(error);
@@ -83,7 +94,7 @@ class App extends Component {
         <div>
           <Connect />
           <PrayerRequest />
-          <Happening posts={this.state.postsWithImage} />
+          <Happening posts={this.state.modifiedPosts} />
           <Message />
           <Groups />
           <Giving />
