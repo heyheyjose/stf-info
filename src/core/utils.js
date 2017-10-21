@@ -1,23 +1,20 @@
 /**
- * regular Promise version here, but pulled out into this utils file. revisit.
+ * regular Promise version here. look into switching to async/await later.
  */
 
-/* export const getEvents = () => {
+export const getEvents = () => {
   const postsUri = 'http://stfchurch.com/wp-json/wp/v2/posts';
 
-  const get = fetch(postsUri)
+  return fetch(postsUri)
     .then(response => {
       return response.json();
     })
     .then(posts => {
-      const filteredHappening = posts.filter(post => {
-        return post.categories.includes(106);
-      });
-      return filteredHappening;
+      return posts.filter(post => post.categories.includes(106));
     })
-    .then(filtered => {
-      const postsWithImage = [];
-      filtered.forEach(post => {
+    .then(filteredPosts => {
+      const modifiedPosts = [];
+      filteredPosts.forEach(post => {
         const featuredMediaId = post.featured_media;
         const mediaUri = `http://stfchurch.com/wp-json/wp/v2/media/${featuredMediaId}`;
 
@@ -27,7 +24,8 @@
           content = post.post_content_plain_text,
           registerLink = post.f1_register_direct_link;
 
-        if (post.categories.includes(106)) {
+        if (post.categories.includes(106) && featuredMediaId !== 0) {
+          // get media data for post if post includes 'featured_media'
           fetch(mediaUri)
             .then(response => {
               return response.json();
@@ -38,23 +36,31 @@
                 date,
                 title,
                 content,
-                image: mediaObject.source_url,
                 registerLink,
+                image: mediaObject.source_url,
               };
-              postsWithImage.push(withImage);
+              modifiedPosts.push(withImage);
             });
+        } else {
+          // do not get media data for post if 'featured_media' is missing
+          const withoutImage = {
+            id,
+            date,
+            title,
+            content,
+            registerLink,
+            image: false,
+          };
+          modifiedPosts.push(withoutImage);
         }
       });
-      // this.setState({ postsWithImage });
-      // console.log(postsWithImage);
-      return postsWithImage;
+      return modifiedPosts;
     })
     .catch(error => {
       console.log(error);
       return error;
     });
-  return get;
-}; */
+};
 
 /**
  * async/await attempt below... come back to this later
