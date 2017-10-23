@@ -65,7 +65,7 @@ class Happening extends Component {
               })
             ) : (
               <div style={{ margin: 20 }}>
-                Something went wrong, please reload the page.
+                There are no events listed right now, please check back later.
               </div>
             )}
           </div>

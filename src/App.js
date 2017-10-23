@@ -27,9 +27,13 @@ class App extends Component {
     };
   }
 
-  async componentDidMount() {
-    const modifiedPosts = await getEvents();
-    this.setState({ modifiedPosts });
+  componentDidMount() {
+    const allPostsUrl = 'http://stfchurch.com/wp-json/wp/v2/posts',
+      allMediaUrl = 'http://stfchurch.com/wp-json/wp/v2/media';
+
+    getEvents(allPostsUrl, allMediaUrl)
+      .then(modifiedPosts => this.setState({ modifiedPosts }))
+      .catch(error => console.log(error));
   }
 
   render() {

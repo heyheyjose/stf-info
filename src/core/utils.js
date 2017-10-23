@@ -2,10 +2,8 @@
  * regular Promise version here. look into switching to async/await later.
  */
 
-export const getEvents = () => {
-  const postsUri = 'http://stfchurch.com/wp-json/wp/v2/posts';
-
-  return fetch(postsUri)
+export const getEvents = (allPostsUrl, allMediaUrl) => {
+  return fetch(allPostsUrl)
     .then(response => {
       return response.json();
     })
@@ -16,8 +14,7 @@ export const getEvents = () => {
       const modifiedPosts = [];
       filteredPosts.forEach(post => {
         const featuredMediaId = post.featured_media;
-        const mediaUri = `http://stfchurch.com/wp-json/wp/v2/media/${featuredMediaId}`;
-
+        const mediaItemUrl = allMediaUrl + `/${featuredMediaId}`;
         const id = post.id,
           date = post.date,
           title = post.title.rendered,
@@ -26,7 +23,7 @@ export const getEvents = () => {
 
         if (post.categories.includes(106) && featuredMediaId !== 0) {
           // get media data for post if post includes 'featured_media'
-          fetch(mediaUri)
+          fetch(mediaItemUrl)
             .then(response => {
               return response.json();
             })
@@ -64,6 +61,10 @@ export const getEvents = () => {
 
 /**
  * async/await attempt below... come back to this later
+ * the componentDidMount for this would have an async in front of it, and
+ * the body would look like this:
+ * const modifiedPosts = await getEvents();
+ * this.setState({ modifiedPosts });
  */
 
 /* const getEventPosts = async () => {
