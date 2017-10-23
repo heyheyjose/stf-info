@@ -17,7 +17,9 @@ class Happening extends Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const postsSortedByDescendingDate = this.props.posts.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
 
     return (
       <div className="card-style">
@@ -30,8 +32,8 @@ class Happening extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-happening">
-            {posts ? (
-              posts.map(post => {
+            {postsSortedByDescendingDate ? (
+              postsSortedByDescendingDate.map(post => {
                 return (
                   <div
                     key={post.id}
@@ -78,9 +80,9 @@ class Happening extends Component {
 export default Happening;
 
 Happening.defaultProps = {
-  posts: [],
+  postsSortedByDescendingDate: [],
 };
 
 Happening.propTypes = {
-  posts: PropTypes.array,
+  postsSortedByDescendingDate: PropTypes.array,
 };
