@@ -28,7 +28,7 @@
 
 .content-section-connect {
   /*padding: 5px;*/
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
   /*text-align: left;*/
 }
 
@@ -85,7 +85,7 @@
 }
 
 .content-section-prayer {
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 
 .btn-prayer-request {
@@ -105,7 +105,7 @@
 }
 
 .content-section-happening-post-wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .content-section-happening-post-image {
@@ -136,7 +136,7 @@
 }
 
 .content-section-message {
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 
 .btn-message {
@@ -152,7 +152,7 @@
 }
 
 .content-section-groups {
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 
 .btn-groups {
@@ -168,7 +168,7 @@
 }
 
 .content-section-giving {
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 
 .btn-giving {
@@ -184,7 +184,7 @@
 }
 
 .content-section-contact {
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 
 .btn-contact {
