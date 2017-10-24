@@ -28,12 +28,12 @@ class PrayerRequest extends Component {
         <Collapse isOpen={this.state.show}>
           <div className="content-section-prayer">
             <p style={{ marginBottom: 10 }}>Fill out the form to send us a prayer request.</p>
-            <p style={{ marginBottom: 30 }}>Staff prays over each request every Monday.</p>
+            <p style={{ marginBottom: 30 }}>Every Monday, staff prays over each request.</p>
             <a
               href="https://stfc.fellowshiponego.com/external/form/327a0a96-36f2-4214-92fc-34a191bbbeb6"
               className="btn btn-outline-primary btn-lg btn-prayer-request"
             >
-              Create Request
+              Send Request
             </a>
           </div>
         </Collapse>

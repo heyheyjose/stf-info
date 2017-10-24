@@ -29,9 +29,7 @@ class Connect extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-connect">
-            <p style={{ marginBottom: 30 }}>
-              Fill out a connection card so we can better understand how we can serve you!
-            </p>
+            <p style={{ marginBottom: 30 }}>Fill out a connection card so we can better understand how to serve you!</p>
             <a
               href="https://stfc.fellowshiponego.com/external/form/bc536a3a-12e9-467b-b798-de246250254c"
               className="btn btn-outline-primary btn-lg btn-connect-card"
