@@ -18,7 +18,7 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
         const id = post.id,
           date = post.date,
           title = post.title.rendered,
-          content = post.post_content_plain_text,
+          content = post.content_plain_text,
           registerLink = post.f1_register_direct_link;
 
         if (post.categories.includes(106) && featuredMediaId !== 0) {
