@@ -59,6 +59,16 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
     });
 };
 
+export const getLatestMessage = allPostsUrl => {
+  return fetch(allPostsUrl)
+    .then(response => {
+      return response.json();
+    })
+    .then(posts => {
+      return posts.filter(post => post.categories.includes(122));
+    });
+};
+
 /**
  * async/await attempt below... come back to this later
  * the componentDidMount for this would have an async in front of it, and
