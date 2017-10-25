@@ -16,7 +16,7 @@ import Giving from './sections/Giving';
 import Contact from './sections/Contact';
 
 // import helpers
-import { getEvents } from './core/utils';
+import { getEvents, getLatestMessage } from './core/utils';
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class App extends Component {
 
     this.state = {
       modifiedPosts: [],
+      messages: [],
     };
   }
 
@@ -34,6 +35,8 @@ class App extends Component {
     getEvents(allPostsUrl, allMediaUrl)
       .then(modifiedPosts => this.setState({ modifiedPosts }))
       .catch(error => console.log(error));
+
+    getLatestMessage(allPostsUrl).then(messages => this.setState({ messages }));
   }
 
   render() {
@@ -44,7 +47,7 @@ class App extends Component {
           <Connect />
           <PrayerRequest />
           <Happening posts={this.state.modifiedPosts} />
-          <Message />
+          <Message messages={this.state.messages} />
           <Groups />
           <Giving />
           <Contact />
