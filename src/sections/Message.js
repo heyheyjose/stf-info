@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
@@ -16,6 +17,8 @@ class Message extends Component {
   }
 
   render() {
+    const messageSrc = this.props.messages[0] && this.props.messages[0].latest_message_video_link;
+
     return (
       <div className="card-style">
         <div className="section-main message">
@@ -26,18 +29,28 @@ class Message extends Component {
           </a>
         </div>
         <Collapse isOpen={this.state.show}>
-          <div className="content-section-message">
-            <p style={{ marginBottom: 30 }}>
-              Watch the latest message or look through previous messages.
-            </p>
-            <a
-              href="http://subsplash.com/stfchurch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-primary btn-lg btn-message"
-            >
-              Start Watching
-            </a>
+          <div>
+            <iframe
+              title="latest message"
+              src={messageSrc}
+              width="100%"
+              height="250px"
+              frameBorder="0"
+              allowFullScreen
+            />
+            <div className="content-section-message">
+              <p style={{ marginBottom: 30 }}>
+                Watch the latest message here each week or browse the archive of messages.
+              </p>
+              <a
+                href="http://subsplash.com/stfchurch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-primary btn-lg btn-message"
+              >
+                View Archive
+              </a>
+            </div>
           </div>
         </Collapse>
       </div>
@@ -46,3 +59,11 @@ class Message extends Component {
 }
 
 export default Message;
+
+Message.defaultProps = {
+  messages: [],
+};
+
+Message.propTypes = {
+  messages: PropTypes.array,
+};
