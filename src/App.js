@@ -16,7 +16,7 @@ import Giving from './sections/Giving';
 import Contact from './sections/Contact';
 
 // import helpers
-import { getEvents, getLatestMessage } from './core/utils';
+import { getEvents, getMessages } from './core/utils';
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class App extends Component {
       .then(modifiedPosts => this.setState({ modifiedPosts }))
       .catch(error => console.log(error));
 
-    getLatestMessage(allPostsUrl).then(messages => this.setState({ messages }));
+    getMessages(allPostsUrl).then(messages => this.setState({ messages }));
   }
 
   render() {

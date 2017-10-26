@@ -65,7 +65,7 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
     });
 };
 
-export const getLatestMessage = allPostsUrl => {
+export const getMessages = allPostsUrl => {
   return fetch(allPostsUrl)
     .then(response => {
       return response.json();
