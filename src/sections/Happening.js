@@ -35,23 +35,18 @@ class Happening extends Component {
             {postsSortedByDescendingDate ? (
               postsSortedByDescendingDate.map(post => {
                 return (
-                  <div
-                    key={post.id}
-                    className="content-section-happening-post-wrapper"
-                  >
+                  <div key={post.id} className="content-section-happening-post-wrapper">
                     {post.image && (
-                      <img
-                        src={post.image}
-                        alt={`${post.title}`}
-                        className="content-section-happening-post-image"
-                      />
+                      <img src={post.image} alt={`${post.title}`} className="content-section-happening-post-image" />
                     )}
-                    <h4 className="content-section-happening-post-title">
-                      {post.title}
-                    </h4>
-                    <p className="content-section-happening-post-content">
-                      {post.content}
-                    </p>
+                    <h4 className="content-section-happening-post-title">{post.title}</h4>
+                    <p className="content-section-happening-post-content">{post.content}</p>
+                    {post.content2.length > 0 && (
+                      <p className="content-section-happening-post-content">{post.content2}</p>
+                    )}
+                    {post.content3.length > 0 && (
+                      <p className="content-section-happening-post-content">{post.content3}</p>
+                    )}
                     {post.registerLink && (
                       <a
                         href={post.registerLink}
@@ -66,9 +61,7 @@ class Happening extends Component {
                 );
               })
             ) : (
-              <div style={{ margin: 20 }}>
-                There are no events listed right now, please check back later.
-              </div>
+              <div style={{ margin: 20 }}>There are no events listed right now, please check back later.</div>
             )}
           </div>
         </Collapse>
