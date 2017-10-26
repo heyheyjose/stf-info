@@ -17,9 +17,11 @@ class Happening extends Component {
   }
 
   render() {
-    const postsSortedByDescendingDate = this.props.posts.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
-    });
+    const postsSortedByDescendingDate =
+      this.props.posts.length > 0 &&
+      this.props.posts.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
 
     return (
       <div className="card-style">
@@ -61,7 +63,9 @@ class Happening extends Component {
                 );
               })
             ) : (
-              <div style={{ margin: 20 }}>There are no events listed right now, please check back later.</div>
+              <div style={{ margin: 20, color: '#8c8c8c' }}>
+                There are no events listed right now, please check back later.
+              </div>
             )}
           </div>
         </Collapse>
@@ -73,9 +77,9 @@ class Happening extends Component {
 export default Happening;
 
 Happening.defaultProps = {
-  postsSortedByDescendingDate: [],
+  posts: [],
 };
 
 Happening.propTypes = {
-  postsSortedByDescendingDate: PropTypes.array,
+  posts: PropTypes.array,
 };

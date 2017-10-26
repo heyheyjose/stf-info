@@ -32,14 +32,20 @@ class Message extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div>
-            <iframe
-              title="latest message"
-              src={messageSrc}
-              width="100%"
-              height="210px"
-              frameBorder="0"
-              allowFullScreen
-            />
+            {this.props.messages.length > 0 ? (
+              <iframe
+                title="latest message"
+                src={messageSrc}
+                width="100%"
+                height="210px"
+                frameBorder="0"
+                allowFullScreen
+              />
+            ) : (
+              <div style={{ margin: 20, color: '#8c8c8c' }}>
+                Message video is currently unavailable, please check back later.
+              </div>
+            )}
             <div className="content-section-message">
               <p style={{ marginBottom: 30 }}>
                 Watch the latest message here each week or browse the archive of messages.
