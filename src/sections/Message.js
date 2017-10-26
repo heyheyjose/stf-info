@@ -17,6 +17,8 @@ class Message extends Component {
   }
 
   render() {
+    // TODO: refactor this... this is an array of all the potential posts that could be in this category
+    // obviously hardcoding the first element in the array here
     const messageSrc = this.props.messages[0] && this.props.messages[0].latest_message_video_link;
 
     return (
@@ -34,7 +36,7 @@ class Message extends Component {
               title="latest message"
               src={messageSrc}
               width="100%"
-              height="250px"
+              height="210px"
               frameBorder="0"
               allowFullScreen
             />
