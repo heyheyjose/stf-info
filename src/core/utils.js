@@ -19,6 +19,8 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
           date = post.date,
           title = post.title.rendered,
           content = post.content_plain_text,
+          content2 = post.content_plain_text_2,
+          content3 = post.content_plain_text_3,
           registerLink = post.f1_register_direct_link;
 
         if (post.categories.includes(106) && featuredMediaId !== 0) {
@@ -33,6 +35,8 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
                 date,
                 title,
                 content,
+                content2,
+                content3,
                 registerLink,
                 image: mediaObject.source_url,
               };
@@ -45,6 +49,8 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
             date,
             title,
             content,
+            content2,
+            content3,
             registerLink,
             image: false,
           };
