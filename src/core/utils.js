@@ -5,7 +5,11 @@
 export const getEvents = (allPostsUrl, allMediaUrl) => {
   return fetch(allPostsUrl)
     .then(response => {
-      return response.json();
+      if (response.ok) {
+        return response.json();
+      } else {
+        return Promise.reject('something went wrong while fetching "all posts". origin: getEvents()');
+      }
     })
     .then(posts => {
       return posts.filter(post => post.categories.includes(106));
@@ -27,7 +31,13 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
           // get media data for post if post includes 'featured_media'
           fetch(mediaItemUrl)
             .then(response => {
-              return response.json();
+              if (response.ok) {
+                return response.json();
+              } else {
+                return Promise.reject(
+                  `something went wrong while fetching "featured media" for post id: ${id}. origin: getEvents()`
+                );
+              }
             })
             .then(mediaObject => {
               const withImage = {
@@ -41,6 +51,20 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
                 image: mediaObject.source_url,
               };
               modifiedPosts.push(withImage);
+            })
+            .catch(e => {
+              const getImageFailure = {
+                id,
+                date,
+                title,
+                content,
+                content2,
+                content3,
+                registerLink,
+                image: false,
+              };
+              modifiedPosts.push(getImageFailure);
+              console.error(e);
             });
         } else {
           // do not get media data for post if 'featured_media' is missing
@@ -59,20 +83,22 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
       });
       return modifiedPosts;
     })
-    .catch(error => {
-      console.log(error);
-      return error;
-    });
+    .catch(e => console.error(e));
 };
 
 export const getMessages = allPostsUrl => {
   return fetch(allPostsUrl)
     .then(response => {
-      return response.json();
+      if (response.ok) {
+        return response.json();
+      } else {
+        return Promise.reject('something went wrong while fetching "all posts". origin: getMessages()');
+      }
     })
     .then(posts => {
       return posts.filter(post => post.categories.includes(122));
-    });
+    })
+    .catch(e => console.error(e));
 };
 
 /**
