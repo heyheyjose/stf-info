@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
@@ -17,10 +16,6 @@ class Message extends Component {
   }
 
   render() {
-    // TODO: refactor this... this is an array of all the potential posts that could be in this category
-    // obviously hardcoding the first element in the array here
-    const messageSrc = this.props.messages[0] && this.props.messages[0].latest_message_video_link;
-
     return (
       <div className="card-style">
         <div className="section-main message">
@@ -32,20 +27,14 @@ class Message extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div>
-            {this.props.messages.length > 0 ? (
+            <div className="sap-embed-player">
               <iframe
                 title="latest message"
-                src={messageSrc}
-                width="100%"
-                height="210px"
+                src="https://subsplash.com/+6bd6/embed/mi/*?video&audio&info&shareable&logoWatermark"
                 frameBorder="0"
                 allowFullScreen
               />
-            ) : (
-              <div style={{ margin: 20, color: '#8c8c8c' }}>
-                Message video is currently unavailable, please check back later.
-              </div>
-            )}
+            </div>
             <div className="content-section-message">
               <p style={{ marginBottom: 30 }}>
                 Watch the latest message here each week or browse the archive of messages.
@@ -67,11 +56,3 @@ class Message extends Component {
 }
 
 export default Message;
-
-Message.defaultProps = {
-  messages: [],
-};
-
-Message.propTypes = {
-  messages: PropTypes.array,
-};
