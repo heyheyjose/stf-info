@@ -27,14 +27,26 @@
 }
 
 .content-section-connect {
-  /*padding: 5px;*/
-  padding: 15px 15px 40px 15px;
-  /*text-align: left;*/
+  padding: 15px 15px 0 15px;
 }
 
 .btn-connect-card {
   color: #0093aa;
   border-color: #0093aa;
+}
+
+.connect-connection-card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 925px;
+}
+
+.connect-connection-card-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 925px;
 }
 
 /*.content-section-connect-title {

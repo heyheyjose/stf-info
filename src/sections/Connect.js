@@ -29,13 +29,15 @@ class Connect extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-connect">
-            <p style={{ marginBottom: 30 }}>Fill out a connection card so we can better understand how to serve you!</p>
-            <a
-              href="https://stfc.fellowshiponego.com/external/form/bc536a3a-12e9-467b-b798-de246250254c"
-              className="btn btn-outline-primary btn-lg btn-connect-card"
-            >
-              Connection Card
-            </a>
+            <p>Fill out the connection card below so we can better understand how to serve you!</p>
+          </div>
+          <div className="connect-connection-card-wrapper">
+            <iframe
+              title="connection card"
+              id="mb-formbuilder-container"
+              src="https://forms.ministryforms.net/viewForm.aspx?formId=bc536a3a-12e9-467b-b798-de246250254c"
+              frameBorder="0"
+            />
           </div>
         </Collapse>
       </div>
