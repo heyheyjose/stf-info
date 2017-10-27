@@ -159,7 +159,6 @@ export const getEventImages = async () => {
  * @return {undefined}
  */
 export function subsplashEmbed(path, host, id) {
-
   /**
    * Strip off the leading + trailing `/`from the host and path, if present.
    */
@@ -197,7 +196,7 @@ export function subsplashEmbed(path, host, id) {
 
   /** Add embed param to the iframe src URL. */
   if (iframeSrc.indexOf('embed') === -1) {
-    iframeSrc.indexOf('?') === -1 ? iframeSrc += '?embed=true' : iframeSrc += '&embed=true';
+    iframeSrc.indexOf('?') === -1 ? (iframeSrc += '?embed=true') : (iframeSrc += '&embed=true');
   }
 
   /** Set the `src` of the iframe and display it. */
@@ -207,8 +206,7 @@ export function subsplashEmbed(path, host, id) {
   var iframePosition = document.getElementById(iframeId).getBoundingClientRect().top;
 
   /** Listen for post messages being sent from the iframe */
-  window.addEventListener('message', function (event) {
-
+  window.addEventListener('message', function(event) {
     if (event.data.pageHeight) {
       /** Update the height of the iframe to match the height of the page. */
       document.getElementById(iframeId).height = event.data.pageHeight;
@@ -231,11 +229,9 @@ export function subsplashEmbed(path, host, id) {
       var url = window.location.href;
 
       if (_sapurl) {
-
         /** Replace `sapurl` in query param with updated path */
         url = url.replace(/(sapurl=)[^\&]+/, '$1' + event.data.pageUrl);
       } else {
-
         /** Add `sapurl` to the query params with the current path */
         url = url + ('?sapurl=' + event.data.pageUrl);
       }
