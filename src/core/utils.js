@@ -86,7 +86,7 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
     .catch(e => console.error(e));
 };
 
-export const getMessages = allPostsUrl => {
+/* export const getMessages = allPostsUrl => {
   return fetch(allPostsUrl)
     .then(response => {
       if (response.ok) {
@@ -99,7 +99,7 @@ export const getMessages = allPostsUrl => {
       return posts.filter(post => post.categories.includes(122));
     })
     .catch(e => console.error(e));
-};
+}; */
 
 /**
  * async/await attempt below... come back to this later
