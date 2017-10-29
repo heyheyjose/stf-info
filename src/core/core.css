@@ -1,0 +1,25 @@
+.campus-info-card-wrapper {
+  margin: 20px 0 20px 0;
+  padding: 0 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.campus-info-card-img {
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.campus-info-card-title {
+  margin: 15px 0 15px 0;
+}
+
+.campus-info-card-text {
+  font-size: 16px;
+}
+
+.campus-info-card-text:last-of-type {
+  margin-top: 15px;
+  font-size: 18px;
+}
