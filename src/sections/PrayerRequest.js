@@ -27,8 +27,7 @@ class PrayerRequest extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-prayer">
-            <p style={{ marginBottom: 10 }}>Fill out the form to send us a prayer request.</p>
-            <p>Every Monday, staff prays over each request.</p>
+            <p>Fill out the form to send us a prayer request. Every Monday, staff prays over each request.</p>
           </div>
           <div className="prayer-request-wrapper">
             <iframe
