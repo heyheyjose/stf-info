@@ -40,7 +40,7 @@ class Message extends Component {
                 Watch the latest message here each week or browse the archive of messages.
               </p>
               <a
-                href="http://subsplash.com/stfchurch"
+                href="http://stfchurch.com/archive"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-primary btn-lg btn-message"
