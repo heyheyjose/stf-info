@@ -229,5 +229,6 @@
 .btn-contact {
   color: #0093aa;
   border-color: #05839a;
+  cursor: pointer;
 }
 /* endregion */
