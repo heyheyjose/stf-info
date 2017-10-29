@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
-// import Input from '../core/connect-form/Input';
-
 class Connect extends Component {
   constructor(props) {
     super(props);
