@@ -231,4 +231,12 @@
   border-color: #05839a;
   cursor: pointer;
 }
+
+.content-section-contact-campus-selector {
+  border: 1px solid #0093aa;
+  color: #0093aa;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
 /* endregion */
