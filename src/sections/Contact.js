@@ -49,11 +49,11 @@ class Contact extends Component {
 
   onChange(e) {
     if (e.target[0].selected) {
-      this.setState({ showBpInfo: !this.state.showBpInfo, showDiInfo: false, showCdInfo: false });
+      this.setState({ showBpInfo: true, showDiInfo: false, showCdInfo: false });
     } else if (e.target[1].selected) {
-      this.setState({ showDiInfo: !this.state.showDiInfo, showBpInfo: false, showCdInfo: false });
+      this.setState({ showBpInfo: false, showDiInfo: true, showCdInfo: false });
     } else if (e.target[2].selected) {
-      this.setState({ showCdInfo: !this.state.showCdInfo, showBpInfo: false, showDiInfo: false });
+      this.setState({ showBpInfo: false, showDiInfo: false, showCdInfo: true });
     }
   }
 
