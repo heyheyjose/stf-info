@@ -11,6 +11,10 @@
   border-top-right-radius: 6px;
 }
 
+.campus-info-card-content-wrapper {
+  padding: 0 15px;
+}
+
 .campus-info-card-title {
   margin: 15px 0 15px 0;
 }
