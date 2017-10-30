@@ -21,7 +21,7 @@ class Contact extends Component {
         title: 'Ballast Point Campus',
         address1: '5101 Bayshore Boulevard',
         address2: 'Tampa, Florida 33611',
-        serviceTimes: 'Sundays, 9:15 a.m. and 11 a.m.',
+        serviceTimes: 'Sundays, 9:15 a.m. and 11:00 a.m.',
       },
       diCampusInfo: {
         image: davisIslandsImg,
@@ -35,7 +35,7 @@ class Contact extends Component {
         title: 'Channel District Campus',
         address1: '1120 E. Kennedy Boulevard, #151',
         address2: 'Tampa, Florida 33602',
-        serviceTimes: 'Sundays, 11 a.m.',
+        serviceTimes: 'Sundays, 11:00 a.m.',
       },
     };
 
