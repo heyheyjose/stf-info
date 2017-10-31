@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
 import CampusInfoCard from '../core/CampusInfoCard';
-import ballastPointImg from '../images/ballast_copy.png';
-import davisIslandsImg from '../images/islands_copy.png';
-import channelDistrictImg from '../images/channel_copy.png';
+import ballastPointImg from '../images/ballastSquare.png';
+import davisIslandsImg from '../images/islandsSquare.png';
+import channelDistrictImg from '../images/channelSquare.png';
 
 class Contact extends Component {
   constructor(props) {
