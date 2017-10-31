@@ -16,7 +16,7 @@ class Contact extends Component {
       showDiInfo: false,
       showCdInfo: false,
       bpCampusInfo: {
-        image: '',
+        image: 'loading...',
         title: 'Ballast Point Campus',
         address1: '5101 Bayshore Boulevard',
         address2: 'Tampa, Florida 33611',
@@ -24,14 +24,14 @@ class Contact extends Component {
         service2: '11:00 a.m. - Modern Service',
       },
       diCampusInfo: {
-        image: '',
+        image: 'loading...',
         title: 'Davis Islands Campus',
         address1: '97 Biscayne Avenue',
         address2: 'Tampa, Florida 33606',
         service1: '10:30 a.m. - Modern Service',
       },
       cdCampusInfo: {
-        image: '',
+        image: 'loading...',
         title: 'Channel District Campus',
         address1: '1120 E. Kennedy Boulevard, #151',
         address2: 'Tampa, Florida 33602',
@@ -49,15 +49,17 @@ class Contact extends Component {
     this.setState({ show: !this.state.show });
 
     getCampusImages(allMediaUrl).then(images => {
-      images.forEach(img => {
-        if (img.id === 20953) {
-          this.setState({ diCampusInfo: { ...this.state.diCampusInfo, image: img.source_url } });
-        } else if (img.id === 20952) {
-          this.setState({ cdCampusInfo: { ...this.state.cdCampusInfo, image: img.source_url } });
-        } else if (img.id === 20951) {
-          this.setState({ bpCampusInfo: { ...this.state.bpCampusInfo, image: img.source_url } });
-        }
-      });
+      if (images !== undefined) {
+        images.forEach(img => {
+          if (img.id === 20953) {
+            this.setState({ diCampusInfo: { ...this.state.diCampusInfo, image: img.source_url } });
+          } else if (img.id === 20952) {
+            this.setState({ cdCampusInfo: { ...this.state.cdCampusInfo, image: img.source_url } });
+          } else if (img.id === 20951) {
+            this.setState({ bpCampusInfo: { ...this.state.bpCampusInfo, image: img.source_url } });
+          }
+        });
+      }
     });
   }
 
