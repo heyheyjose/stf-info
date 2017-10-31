@@ -21,21 +21,22 @@ class Contact extends Component {
         title: 'Ballast Point Campus',
         address1: '5101 Bayshore Boulevard',
         address2: 'Tampa, Florida 33611',
-        serviceTimes: 'Sundays, 9:15 a.m. and 11:00 a.m.',
+        service1: '9:15 a.m. - Blended Service',
+        service2: '11:00 a.m. - Modern Service',
       },
       diCampusInfo: {
         image: davisIslandsImg,
         title: 'Davis Islands Campus',
         address1: '97 Biscayne Avenue',
         address2: 'Tampa, Florida 33606',
-        serviceTimes: 'Sundays, 10:30 a.m.',
+        service1: '10:30 a.m. - Modern Service',
       },
       cdCampusInfo: {
         image: channelDistrictImg,
         title: 'Channel District Campus',
         address1: '1120 E. Kennedy Boulevard, #151',
         address2: 'Tampa, Florida 33602',
-        serviceTimes: 'Sundays, 11:00 a.m.',
+        service1: '11:00 a.m. - Modern Service',
       },
     };
 
@@ -86,8 +87,8 @@ class Contact extends Component {
                 813-251-1515
               </a>
             </p>
-            <p style={{ fontSize: 14 }}>{this.state.diCampusInfo.address1}</p>
-            <p style={{ fontSize: 14, marginBottom: 45 }}>{this.state.diCampusInfo.address2}</p>
+            <p style={{ fontSize: 16 }}>{this.state.diCampusInfo.address1}</p>
+            <p style={{ fontSize: 16, marginBottom: 45 }}>{this.state.diCampusInfo.address2}</p>
 
             <p style={{ marginBottom: 5 }}>Select for campus info:</p>
             <select onChange={this.onChange} className="content-section-contact-campus-selector">
