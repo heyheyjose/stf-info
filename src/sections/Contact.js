@@ -79,15 +79,15 @@ class Contact extends Component {
         </div>
         <Collapse isOpen={this.state.show}>
           <div className="content-section-contact">
-            <h4 style={{ marginBottom: 10 }}>Get in touch with us!</h4>
-            <p style={{ marginBottom: 10 }}>
+            <h4 style={{ marginBottom: 15 }}>Get in touch with us!</h4>
+            <p style={{ marginBottom: 15 }}>
               Main Office:
               <a style={{ textDecoration: 'underline', marginLeft: 10 }} href="tel:+1-813-251-1515">
                 813-251-1515
               </a>
             </p>
             <p style={{ fontSize: 14 }}>{this.state.diCampusInfo.address1}</p>
-            <p style={{ fontSize: 14, marginBottom: 40 }}>{this.state.diCampusInfo.address2}</p>
+            <p style={{ fontSize: 14, marginBottom: 45 }}>{this.state.diCampusInfo.address2}</p>
 
             <p style={{ marginBottom: 5 }}>Select for campus info:</p>
             <select onChange={this.onChange} className="content-section-contact-campus-selector">

@@ -233,8 +233,9 @@
 }
 
 .content-section-contact-campus-selector {
-  border: 1px solid #0093aa;
-  color: #0093aa;
+  outline: 0;
+  border: 1px solid #cccccc;
+  color: #3b3c3e;
   padding: 0.25rem 0.5rem;
   line-height: 1.5;
   border-radius: 0.3rem;
