@@ -1,5 +1,5 @@
 /**
- * regular Promise version here. look into switching to async/await later.
+ * regular Promise version here of getEvents. look into switching to async/await later (below).
  */
 
 export const getEvents = (allPostsUrl, allMediaUrl) => {
@@ -86,20 +86,20 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
     .catch(e => console.error(e));
 };
 
-/* export const getMessages = allPostsUrl => {
-  return fetch(allPostsUrl)
+export const getCampusImages = allMediaUrl => {
+  return fetch(allMediaUrl)
     .then(response => {
       if (response.ok) {
         return response.json();
       } else {
-        return Promise.reject('something went wrong while fetching "all posts". origin: getMessages()');
+        return Promise.reject('something went wrong while fetching "all media". origin: getCampusImages()');
       }
     })
-    .then(posts => {
-      return posts.filter(post => post.categories.includes(122));
+    .then(allMedia => {
+      return allMedia.filter(img => img.alt_text === 'stf-info-site');
     })
     .catch(e => console.error(e));
-}; */
+};
 
 /**
  * async/await attempt below... come back to this later
