@@ -3,9 +3,8 @@ import classNames from 'classnames';
 import { Collapse } from 'reactstrap';
 
 import CampusInfoCard from '../core/CampusInfoCard';
-import ballastPointImg from '../images/ballastSquare.png';
-import davisIslandsImg from '../images/islandsSquare.png';
-import channelDistrictImg from '../images/channelSquare.png';
+
+import { getCampusImages } from '../core/utils';
 
 class Contact extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class Contact extends Component {
       showDiInfo: false,
       showCdInfo: false,
       bpCampusInfo: {
-        image: ballastPointImg,
+        image: '',
         title: 'Ballast Point Campus',
         address1: '5101 Bayshore Boulevard',
         address2: 'Tampa, Florida 33611',
@@ -25,14 +24,14 @@ class Contact extends Component {
         service2: '11:00 a.m. - Modern Service',
       },
       diCampusInfo: {
-        image: davisIslandsImg,
+        image: '',
         title: 'Davis Islands Campus',
         address1: '97 Biscayne Avenue',
         address2: 'Tampa, Florida 33606',
         service1: '10:30 a.m. - Modern Service',
       },
       cdCampusInfo: {
-        image: channelDistrictImg,
+        image: '',
         title: 'Channel District Campus',
         address1: '1120 E. Kennedy Boulevard, #151',
         address2: 'Tampa, Florida 33602',
@@ -45,7 +44,21 @@ class Contact extends Component {
   }
 
   toggle() {
+    const allMediaUrl = 'http://stfchurch.com/wp-json/wp/v2/media';
+
     this.setState({ show: !this.state.show });
+
+    getCampusImages(allMediaUrl).then(images => {
+      images.forEach(img => {
+        if (img.id === 20953) {
+          this.setState({ diCampusInfo: { ...this.state.diCampusInfo, image: img.source_url } });
+        } else if (img.id === 20952) {
+          this.setState({ cdCampusInfo: { ...this.state.cdCampusInfo, image: img.source_url } });
+        } else if (img.id === 20951) {
+          this.setState({ bpCampusInfo: { ...this.state.bpCampusInfo, image: img.source_url } });
+        }
+      });
+    });
   }
 
   onChange(e) {
