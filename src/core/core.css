@@ -23,7 +23,11 @@
   font-size: 16px;
 }
 
-.campus-info-card-text:last-of-type {
-  margin-top: 15px;
+.campus-info-card-service-text {
   font-size: 18px;
+}
+
+.campus-info-card-service-text:first-child {
+  font-weight: 700;
+  margin-top: 15px;
 }

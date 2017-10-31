@@ -10,10 +10,11 @@ const CampusInfoCard = props => {
         <h4 className="campus-info-card-title">{props.campusInfo.title}</h4>
         <p className="campus-info-card-text">{props.campusInfo.address1}</p>
         <p className="campus-info-card-text">{props.campusInfo.address2}</p>
-        <p className="campus-info-card-text">
-          <strong>Service Times: </strong>
-          {props.campusInfo.serviceTimes}
-        </p>
+        <div>
+          <p className="campus-info-card-service-text">Sunday Service Times:</p>
+          <p className="campus-info-card-service-text">{props.campusInfo.service1}</p>
+          <p className="campus-info-card-service-text">{props.campusInfo.service2}</p>
+        </div>
       </div>
     </div>
   );
