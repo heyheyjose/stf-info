@@ -28,14 +28,22 @@ class Groups extends Component {
         <Collapse isOpen={this.state.show}>
           <div className="content-section-groups">
             <p style={{ marginBottom: 30 }}>Browse our small groups and get information on how to sign up.</p>
-            <a
+            {/* <a
               href="https://www.churchteams.com/m/Login.asp?oID=11498&secID=MWNZR2ovclNGVlJtbFl3cmJkSmFyMXNJQ3lyRmk5eHo%3D&page=GroupBrowseNew.asp?filter=y"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-primary btn-lg btn-groups"
             >
               Browse Groups
-            </a>
+            </a> */}
+          </div>
+          <div className="groups-list-wrapper">
+            <iframe
+              title="small groups"
+              id="groups-list"
+              src="https://www.churchteams.com/m/Login.asp?oID=11498&secID=MWNZR2ovclNGVlJtbFl3cmJkSmFyMXNJQ3lyRmk5eHo%3D&page=GroupBrowseNew.asp?filter=y"
+              frameBorder="0"
+            />
           </div>
         </Collapse>
       </div>

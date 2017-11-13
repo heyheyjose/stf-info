@@ -158,6 +158,20 @@
   color: #900e13;
   border-color: #900e13;
 }
+
+.groups-list-wrapper {
+  position: relative;
+  width: 100%;
+  height: 625px;
+}
+
+.groups-list-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 625px;
+}
 /* endregion */
 
 /* region Giving */
