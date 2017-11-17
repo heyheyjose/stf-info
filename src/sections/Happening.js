@@ -41,13 +41,29 @@ class Happening extends Component {
                     {post.image && (
                       <img src={post.image} alt={`${post.title}`} className="content-section-happening-post-image" />
                     )}
-                    <h4 className="content-section-happening-post-title">{post.title}</h4>
+                    {post.plainTextTitle.length > 0 ? (
+                      <h4 className="content-section-happening-post-title">{post.plainTextTitle}</h4>
+                    ) : (
+                      <h4 className="content-section-happening-post-title">{post.title}</h4>
+                    )}
                     <p className="content-section-happening-post-content">{post.content}</p>
                     {post.content2.length > 0 && (
                       <p className="content-section-happening-post-content">{post.content2}</p>
                     )}
                     {post.content3.length > 0 && (
                       <p className="content-section-happening-post-content">{post.content3}</p>
+                    )}
+                    {post.content4.length > 0 && (
+                      <p className="content-section-happening-post-content">{post.content4}</p>
+                    )}
+                    {post.content5.length > 0 && (
+                      <p className="content-section-happening-post-content">{post.content5}</p>
+                    )}
+                    {post.contentSmall1.length > 0 && (
+                      <p className="content-section-happening-post-content-small">{post.contentSmall1}</p>
+                    )}
+                    {post.contentSmall2.length > 0 && (
+                      <p className="content-section-happening-post-content-small">{post.contentSmall2}</p>
                     )}
                     {post.registerLink && (
                       <a
