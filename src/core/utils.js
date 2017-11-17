@@ -18,13 +18,18 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
       const modifiedPosts = [];
       filteredPosts.forEach(post => {
         const featuredMediaId = post.featured_media;
-        const mediaItemUrl = allMediaUrl + `/${featuredMediaId}`;
+        const mediaItemUrl = allMediaUrl + `/${featuredMediaId}`; // TODO: this might not be the most flexible way to do this
         const id = post.id,
           date = post.date,
           title = post.title.rendered,
+          plainTextTitle = post.plain_text_title,
           content = post.content_plain_text,
           content2 = post.content_plain_text_2,
           content3 = post.content_plain_text_3,
+          content4 = post.content_plain_text_4,
+          content5 = post.content_plain_text_5,
+          contentSmall1 = post.small_size_content_1,
+          contentSmall2 = post.small_size_content_2,
           registerLink = post.f1_register_direct_link;
 
         if (post.categories.includes(106) && featuredMediaId !== 0) {
@@ -44,9 +49,14 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
                 id,
                 date,
                 title,
+                plainTextTitle,
                 content,
                 content2,
                 content3,
+                content4,
+                content5,
+                contentSmall1,
+                contentSmall2,
                 registerLink,
                 image: mediaObject.source_url,
               };
@@ -57,9 +67,14 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
                 id,
                 date,
                 title,
+                plainTextTitle,
                 content,
                 content2,
                 content3,
+                content4,
+                content5,
+                contentSmall1,
+                contentSmall2,
                 registerLink,
                 image: false,
               };
@@ -72,9 +87,14 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
             id,
             date,
             title,
+            plainTextTitle,
             content,
             content2,
             content3,
+            content4,
+            content5,
+            contentSmall1,
+            contentSmall2,
             registerLink,
             image: false,
           };
@@ -87,7 +107,8 @@ export const getEvents = (allPostsUrl, allMediaUrl) => {
 };
 
 export const getCampusImages = allMediaUrl => {
-  return fetch(allMediaUrl)
+  const get50MediaUrl = allMediaUrl + '?per_page=50'; // TODO: this might not be the most flexible way to do this
+  return fetch(get50MediaUrl)
     .then(response => {
       if (response.ok) {
         return response.json();
